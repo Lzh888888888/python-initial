@@ -1,32 +1,68 @@
 主要用於暫存或恢復用
 
 建立印藏資料夾：
-git init
+    git init
 
 加入暫存區：(進入暫存區檔案旁會顯示「A」)
-git add 檔案名(可用「*.py」為所有的python檔案，「.」為全部檔案)
+    git add 檔案名(可用「*.py」為所有的python檔案，「.」為全部檔案)
 
 建立還原點：
-git commit -m "想用的還原名稱"
+    git commit -m "想用的還原名稱"
 
 
 檢查當前目錄中的狀態：
-git status
+    git status
 
 檢視還原點歷史(日誌)：
-git log
+    git log
 (按下「q」可結束檢視)
 
 簡化的日誌：
-git log --oneline
+    git log --oneline
 
 比較新舊版本的差異：
-git diff (日誌上要還原的編號 ex.2d73044) -- 檔案名
+    git diff (日誌上要還原的編號 ex.2d73044) -- 檔案名
 
 還原先前的快照：
-git checkout (要還原的編號) -- 檔案名
+    git checkout (要還原的編號) -- 檔案名
 還原到更早的快照(還原後後面的快照會消失)：
-git reset  --hard (要還原的編號)
+    git reset  --hard (要還原的編號)
 
 要忽略儲存的檔案：
     先建立「.gitignore」在裡面輸入要排除的檔案(.ex. apple.png或*.png)
+
+儲存到github上
+1.進入github到個人頁面
+2.在上方點擊Repositories並建立新的儲存庫
+3.建立完後滑到下方的「...or push an existing repository from the command line」
+並逐一複製運行三行代碼就完成了
+
+上傳到github後的修改方法：
+    git add .
+    git commit -m "想用的還原名稱"
+    git push
+
+
+從github複製檔案：
+1.點擊綠色按鈕的「code」
+2.複製網址
+3.輸入
+    git clone (網址)
+會出現資料夾
+4.輸入
+    cd (資料夾名稱)
+即可用git指令操作儲存庫(協作用)
+
+協作者使用：
+    檔案同步：
+        git pull
+
+    建立獨立的儲存庫：
+        git checkout -b  branch2
+
+    替代github上的檔案：
+        git add .
+        git commit -m "想用的還原名稱"
+        git push origin branch2
+
+
