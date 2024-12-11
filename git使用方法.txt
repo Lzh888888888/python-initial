@@ -42,6 +42,8 @@
     git commit -m "想用的還原名稱"
     git push
 
+檔案同步：
+     git pull
 
 從github複製檔案：
 1.點擊綠色按鈕的「code」
@@ -54,9 +56,6 @@
 即可用git指令操作儲存庫(協作用)
 
 協作者使用：
-    檔案同步：
-        git pull
-
     建立獨立的儲存庫：
         git checkout -b  branch2
 
